@@ -1,0 +1,15 @@
+[project]
+name = "TheFirstBots"
+version = "0.1.0"
+description = "TheFirstBots"
+readme = "README.md"
+requires-python = ">=3.8, <4.0"
+
+[tool.nonebot]
+adapters = [
+    { name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11" }
+]
+plugins = ["nonebot_plugin_gocqhttp", "nonebot_plugin_status", "nonebot_plugin_crazy_thursday", "nonebot_plugin_what2eat", "nonebot_plugin_antirecall", "nonebot_plugin_repeater"]
+plugin_dirs = ["./plugins"]
+builtin_plugins = ["echo"]
+

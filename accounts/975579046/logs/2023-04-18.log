@@ -1,0 +1,85 @@
+[2023-04-18 13:05:05] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-04-18 13:05:14] [WARNING]: 警告: 聊天服务器延迟为 1021ms，大于 1000ms, 可能出现消息丢失/延迟或频繁掉线等情况, 请检查本地网络状态. 
+[2023-04-18 18:45:31] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-04-18 18:45:35] [WARNING]: 检查更新失败: Get "https://api.github.com/repos/Mrs4s/go-cqhttp/releases/latest": dial tcp 127.0.0.1:443: connectex: No connection could be made because the target machine actively refused it. 
+[2023-04-18 21:01:31] [ERROR]: Protocol -> unexpected disconnect: read tcp 192.168.1.8:8205->113.96.18.205:8080: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. 
+[2023-04-18 21:01:52] [ERROR]: Protocol -> connect server error: dial tcp error: dial tcp 183.47.102.165:8080: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. 
+[2023-04-18 21:01:52] [ERROR]: Protocol -> connect server error: dial tcp error: dial tcp 183.47.102.165:8080: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. 
+[2023-04-18 21:01:52] [WARNING]: Bot已离线: connection dropped by server. 
+[2023-04-18 21:01:55] [WARNING]: 将在 3 秒后尝试重连. 重连次数：2/0 
+[2023-04-18 21:01:58] [WARNING]: 尝试重连... 
+[2023-04-18 21:01:58] [ERROR]: Protocol -> connect server error: dial tcp error: dial tcp 183.47.102.213:8080: connectex: A socket operation was attempted to an unreachable host. 
+[2023-04-18 21:01:58] [WARNING]: 快速重连失败: dial tcp error: dial tcp 183.47.102.213:8080: connectex: A socket operation was attempted to an unreachable host. 
+[2023-04-18 21:01:58] [FATAL]: 快速重连失败, 扫码登录无法恢复会话. 
+[2023-04-18 21:02:03] [ERROR]: Protocol -> connect server error: dial tcp error: dial tcp 42.81.172.81:80: connectex: A socket operation was attempted to an unreachable host. 
+[2023-04-18 21:02:03] [WARNING]: 恢复会话失败: dial tcp error: dial tcp 42.81.172.81:80: connectex: A socket operation was attempted to an unreachable host. , 尝试使用正常流程登录. 
+[2023-04-18 21:02:04] [ERROR]: Protocol -> connect server error: dial tcp error: dial tcp 42.81.172.81:80: connectex: A socket operation was attempted to an unreachable host. 
+[2023-04-18 21:02:04] [FATAL]: 登录时发生致命错误: dial tcp error: dial tcp 42.81.172.81:80: connectex: A socket operation was attempted to an unreachable host. 
+[2023-04-18 21:02:07] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:02:07] [ERROR]: Protocol -> connect server error: dial tcp error: dial tcp 42.81.172.81:80: connectex: A socket operation was attempted to an unreachable host. 
+[2023-04-18 21:02:07] [FATAL]: 登录时发生致命错误: dial tcp error: dial tcp 42.81.172.81:80: connectex: A socket operation was attempted to an unreachable host. 
+[2023-04-18 21:02:11] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:02:11] [ERROR]: Protocol -> connect server error: dial tcp error: dial tcp 42.81.172.81:80: connectex: A socket operation was attempted to an unreachable host. 
+[2023-04-18 21:02:11] [FATAL]: 登录时发生致命错误: dial tcp error: dial tcp 42.81.172.81:80: connectex: A socket operation was attempted to an unreachable host. 
+[2023-04-18 21:02:15] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:02:15] [ERROR]: Protocol -> connect server error: dial tcp error: dial tcp 42.81.172.81:80: connectex: A socket operation was attempted to an unreachable host. 
+[2023-04-18 21:02:15] [FATAL]: 登录时发生致命错误: dial tcp error: dial tcp 42.81.172.81:80: connectex: A socket operation was attempted to an unreachable host. 
+[2023-04-18 21:02:18] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:02:18] [ERROR]: Protocol -> connect server error: dial tcp error: dial tcp 42.81.172.81:80: connectex: A socket operation was attempted to an unreachable host. 
+[2023-04-18 21:02:18] [FATAL]: 登录时发生致命错误: dial tcp error: dial tcp 42.81.172.81:80: connectex: A socket operation was attempted to an unreachable host. 
+[2023-04-18 21:02:22] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:02:22] [ERROR]: Protocol -> connect server error: dial tcp error: dial tcp 42.81.172.81:80: connectex: A socket operation was attempted to an unreachable host. 
+[2023-04-18 21:02:22] [FATAL]: 登录时发生致命错误: dial tcp error: dial tcp 42.81.172.81:80: connectex: A socket operation was attempted to an unreachable host. 
+[2023-04-18 21:02:25] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:02:25] [ERROR]: Protocol -> connect server error: dial tcp error: dial tcp 42.81.172.81:80: connectex: A socket operation was attempted to an unreachable host. 
+[2023-04-18 21:02:25] [FATAL]: 登录时发生致命错误: dial tcp error: dial tcp 42.81.172.81:80: connectex: A socket operation was attempted to an unreachable host. 
+[2023-04-18 21:02:29] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:02:29] [ERROR]: Protocol -> connect server error: dial tcp error: dial tcp 42.81.172.81:80: connectex: A socket operation was attempted to an unreachable network. 
+[2023-04-18 21:02:29] [FATAL]: 登录时发生致命错误: dial tcp error: dial tcp 42.81.172.81:80: connectex: A socket operation was attempted to an unreachable network. 
+[2023-04-18 21:02:33] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:04:34] [FATAL]: 二维码过期 
+[2023-04-18 21:04:38] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:06:40] [FATAL]: 二维码过期 
+[2023-04-18 21:06:43] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:08:45] [FATAL]: 二维码过期 
+[2023-04-18 21:08:49] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:10:50] [FATAL]: 二维码过期 
+[2023-04-18 21:10:54] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:12:55] [FATAL]: 二维码过期 
+[2023-04-18 21:12:59] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:15:00] [FATAL]: 二维码过期 
+[2023-04-18 21:15:03] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:17:05] [FATAL]: 二维码过期 
+[2023-04-18 21:17:09] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:19:10] [FATAL]: 二维码过期 
+[2023-04-18 21:19:14] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:21:15] [FATAL]: 二维码过期 
+[2023-04-18 21:21:18] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:23:20] [FATAL]: 二维码过期 
+[2023-04-18 21:23:24] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:25:26] [FATAL]: 二维码过期 
+[2023-04-18 21:25:29] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:27:30] [FATAL]: 二维码过期 
+[2023-04-18 21:27:34] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:29:35] [FATAL]: 二维码过期 
+[2023-04-18 21:29:39] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:31:40] [FATAL]: 二维码过期 
+[2023-04-18 21:31:44] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:33:45] [FATAL]: 二维码过期 
+[2023-04-18 21:33:49] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:35:50] [FATAL]: 二维码过期 
+[2023-04-18 21:35:54] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:37:55] [FATAL]: 二维码过期 
+[2023-04-18 21:37:59] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:40:00] [FATAL]: 二维码过期 
+[2023-04-18 21:40:04] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:42:05] [FATAL]: 二维码过期 
+[2023-04-18 21:42:08] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:44:11] [FATAL]: 二维码过期 
+[2023-04-18 21:44:14] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:46:15] [FATAL]: 二维码过期 
+[2023-04-18 21:46:18] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:48:20] [FATAL]: 二维码过期 
+[2023-04-18 21:48:24] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2023-04-18 21:48:49] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-04-18 22:15:46] [WARNING]: 获取消息时出现错误: get value error: leveldb: not found 

@@ -1,0 +1,290 @@
+[2023-03-21 22:52:06] [WARNING]: 虚拟设备信息不存在, 将自动生成随机设备. 
+[2023-03-21 22:54:45] [WARNING]: 登录需要滑条验证码, 请验证后重试. 
+[2023-03-21 22:54:45] [WARNING]: 请选择提交滑块ticket方式: 
+[2023-03-21 22:54:45] [WARNING]: 1. 自动提交 
+[2023-03-21 22:54:45] [WARNING]: 2. 手动抓取提交 
+[2023-03-21 22:54:45] [WARNING]: 请输入(1 - 2)： 
+[2023-03-21 22:54:58] [WARNING]: 请前往该地址验证 -> https://ssl.captcha.qq.com/template/wireless_mqq_captcha.html?style=simple&aid=16&uin=975579046&sid=2917472110762378589&cap_cd=amQQ_RO-P7HQrriCnoY877mJ61jfwJI0PPqnVuW01qjAFXd8f2GVhw**&clientype=1&apptype=2  
+[2023-03-21 22:54:58] [WARNING]: 请输入ticket： (Enter 提交) 
+[2023-03-21 22:55:52] [WARNING]: 登录需要滑条验证码, 请验证后重试. 
+[2023-03-21 22:55:52] [WARNING]: 请选择提交滑块ticket方式: 
+[2023-03-21 22:55:52] [WARNING]: 1. 自动提交 
+[2023-03-21 22:55:52] [WARNING]: 2. 手动抓取提交 
+[2023-03-21 22:55:52] [WARNING]: 请输入(1 - 2)： 
+[2023-03-21 22:55:59] [WARNING]: 请前往该地址验证 -> https://ssl.captcha.qq.com/template/wireless_mqq_captcha.html?style=simple&aid=16&uin=975579046&sid=8818512053092861345&cap_cd=xf-s_6zBlwiS8vYkmKixOKJgjCWQTTw1Nb7khQws6B9y79nGIiB_Yg**&clientype=1&apptype=2  
+[2023-03-21 22:55:59] [WARNING]: 请输入ticket： (Enter 提交) 
+[2023-03-21 22:56:36] [WARNING]: 账号已开启设备锁，请选择验证方式: 
+[2023-03-21 22:56:36] [WARNING]: 1. 向手机 155*******0 发送短信验证码 
+[2023-03-21 22:56:36] [WARNING]: 2. 使用手机QQ扫码验证. 
+[2023-03-21 22:56:36] [WARNING]: 请输入(1 - 2)： 
+[2023-03-21 22:56:41] [WARNING]: 账号已开启设备锁，请前往 -> https://accounts.qq.com/safe/verify?_wv=2&_wwv=128&envfrom=double-check&uin=975579046&sig=n9l78nxsR3yzwSLlJxs2FhEkGXymTnjunPTYkPagEvbmCI1BVg5evxhTK5%2FSTvsvw5mWul4mHJd7GO8Sklfv8LUuXz5RwLQ5TRsLlFlCRHQ%3D <- 验证后重启Bot. 
+[2023-03-21 22:58:11] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 22:58:15] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 22:58:20] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 22:58:25] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 22:58:30] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 22:58:36] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 22:58:41] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 22:58:46] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 22:58:51] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 22:58:57] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 22:59:02] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 22:59:07] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 22:59:13] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 22:59:18] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 22:59:23] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 22:59:28] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 22:59:34] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 22:59:39] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 22:59:44] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 22:59:49] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 22:59:55] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:00:00] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:00:05] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:00:10] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:00:16] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:00:21] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:00:26] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:00:31] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:00:37] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:00:42] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:00:47] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:00:52] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:00:58] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:01:03] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:01:08] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:01:13] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:01:19] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:01:24] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:01:29] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:01:34] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:01:40] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:01:45] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:01:50] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:01:55] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:02:01] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:02:06] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:02:11] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:02:16] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:02:22] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:02:27] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:02:32] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:02:37] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:02:43] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:02:48] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:02:53] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:02:59] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:03:04] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:03:09] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:03:14] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:03:20] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:03:25] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:03:30] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:03:35] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:03:41] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:03:46] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:03:51] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:03:56] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:04:02] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:04:07] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:04:12] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:04:17] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:04:23] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:04:28] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:04:33] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:04:38] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:04:44] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:04:49] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:04:54] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:04:59] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:05:05] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:05:10] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:05:15] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:05:20] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:05:26] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:05:27] [WARNING]: Bot已离线: 你的QQ号于23:06在【PCS02】设备登录，当前设备已下线。如果这不是你本人操作，那么你的QQ密码可能已经泄露，请尽快重新登录并修改密码。 
+[2023-03-21 23:05:30] [WARNING]: 将在 3 秒后尝试重连. 重连次数：2/0 
+[2023-03-21 23:05:31] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:05:33] [WARNING]: 尝试重连... 
+[2023-03-21 23:05:33] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:05:34] [WARNING]: 快速重连失败: token failed 
+[2023-03-21 23:05:34] [WARNING]: 快速重连失败, 尝试普通登录. 这可能是因为其他端强行T下线导致的. 
+[2023-03-21 23:05:36] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:05:36] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:05:41] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:05:47] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:05:48] [WARNING]: Bot已离线: 你的QQ号于23:06在【PCS02】设备登录，当前设备已下线。如果这不是你本人操作，那么你的QQ密码可能已经泄露，请尽快重新登录并修改密码。 
+[2023-03-21 23:05:51] [WARNING]: 将在 3 秒后尝试重连. 重连次数：2/0 
+[2023-03-21 23:05:52] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:05:54] [WARNING]: 尝试重连... 
+[2023-03-21 23:05:54] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:05:57] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:06:02] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:06:03] [WARNING]: Bot已离线: 你的QQ号于23:06在【PCS02】设备登录，当前设备已下线。如果这不是你本人操作，那么你的QQ密码可能已经泄露，请尽快重新登录并修改密码。 
+[2023-03-21 23:06:06] [WARNING]: 将在 3 秒后尝试重连. 重连次数：2/0 
+[2023-03-21 23:06:08] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:06:09] [WARNING]: 尝试重连... 
+[2023-03-21 23:06:09] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:06:09] [WARNING]: 快速重连失败: token failed 
+[2023-03-21 23:06:09] [WARNING]: 快速重连失败, 尝试普通登录. 这可能是因为其他端强行T下线导致的. 
+[2023-03-21 23:06:11] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:06:13] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:06:18] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:06:24] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:06:29] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:06:34] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:06:39] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:06:41] [WARNING]: Bot已离线: 你的QQ号于23:07在【PCS02】设备登录，当前设备已下线。如果这不是你本人操作，那么你的QQ密码可能已经泄露，请尽快重新登录并修改密码。 
+[2023-03-21 23:06:44] [WARNING]: 将在 3 秒后尝试重连. 重连次数：2/0 
+[2023-03-21 23:06:45] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:06:47] [WARNING]: 尝试重连... 
+[2023-03-21 23:06:47] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:06:50] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:06:55] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:07:00] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:07:06] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:07:11] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:07:16] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:07:21] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:07:27] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:07:32] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:07:37] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:07:42] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:07:48] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:07:53] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:07:58] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:08:03] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:08:09] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:08:14] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:08:19] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:08:24] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:08:30] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:08:35] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:08:37] [FATAL]: open cache image db failed: The process cannot access the file because it is being used by another process. 
+[2023-03-21 23:08:40] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:08:45] [WARNING]: 连接到反向WebSocket Universal服务器 ws://http://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp: lookup http: no such host 
+[2023-03-21 23:08:46] [FATAL]: open cache image db failed: The process cannot access the file because it is being used by another process. 
+[2023-03-21 23:08:58] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:08:59] [WARNING]: 恢复会话失败: token failed , 尝试使用正常流程登录. 
+[2023-03-21 23:09:04] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:10:14] [WARNING]: 监听反向WS Universal时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2023-03-21 23:11:06] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:15:28] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:16:28] [WARNING]: 监听反向WS Universal时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2023-03-21 23:16:31] [WARNING]: 向反向WS Universal服务器推送 Event 时出现错误: write tcp 127.0.0.1:2932->127.0.0.1:42830: use of closed network connection 
+[2023-03-21 23:16:36] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:16:41] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:16:46] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:16:51] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:16:54] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:16:57] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:17:00] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:17:12] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:17:14] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:17:17] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:17:20] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:17:23] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:17:26] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:17:29] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:17:32] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:17:35] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:17:38] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:17:41] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:17:44] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:17:55] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:17:57] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:18:00] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:18:03] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:18:06] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:18:09] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:20:02] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:20:04] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:20:07] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:20:10] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:20:13] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:20:16] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:20:19] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:20:22] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:20:25] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:20:28] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:20:31] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:20:34] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:20:37] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:20:40] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:20:43] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:20:46] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:20:49] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:20:52] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:20:55] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:20:58] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:21:01] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:21:06] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:21:11] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:21:16] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:21:21] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:21:21] [WARNING]: Bot已离线: 你的QQ号于23:22在【PCS02】设备登录，当前设备已下线。如果这不是你本人操作，那么你的QQ密码可能已经泄露，请尽快重新登录并修改密码。 
+[2023-03-21 23:21:24] [WARNING]: 将在 3 秒后尝试重连. 重连次数：2/0 
+[2023-03-21 23:21:26] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:21:27] [WARNING]: 尝试重连... 
+[2023-03-21 23:21:28] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:21:28] [WARNING]: 快速重连失败: token failed 
+[2023-03-21 23:21:28] [WARNING]: 快速重连失败, 尝试普通登录. 这可能是因为其他端强行T下线导致的. 
+[2023-03-21 23:21:31] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:21:34] [ERROR]: 获取T544时出现问题: Post "https://captcha.go-cqhttp.org/sdk/dandelion/energy": context deadline exceeded (Client.Timeout exceeded while awaiting headers) 
+[2023-03-21 23:21:34] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:21:36] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:21:41] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:21:44] [WARNING]: Bot已离线: 你的QQ号于23:22在【PCS02】设备登录，当前设备已下线。如果这不是你本人操作，那么你的QQ密码可能已经泄露，请尽快重新登录并修改密码。 
+[2023-03-21 23:21:46] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:21:47] [WARNING]: 将在 3 秒后尝试重连. 重连次数：2/0 
+[2023-03-21 23:21:50] [WARNING]: 尝试重连... 
+[2023-03-21 23:21:50] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:21:50] [WARNING]: 快速重连失败: token failed 
+[2023-03-21 23:21:50] [WARNING]: 快速重连失败, 尝试普通登录. 这可能是因为其他端强行T下线导致的. 
+[2023-03-21 23:21:51] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:21:52] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:21:56] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:22:00] [WARNING]: Bot已离线: 你的QQ号于23:22在【PCS02】设备登录，当前设备已下线。如果这不是你本人操作，那么你的QQ密码可能已经泄露，请尽快重新登录并修改密码。 
+[2023-03-21 23:22:01] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:22:03] [WARNING]: 将在 3 秒后尝试重连. 重连次数：2/0 
+[2023-03-21 23:22:06] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:22:06] [WARNING]: 尝试重连... 
+[2023-03-21 23:22:07] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:22:11] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:22:15] [WARNING]: Bot已离线: 你的QQ号于23:22在【PCS02】设备登录，当前设备已下线。如果这不是你本人操作，那么你的QQ密码可能已经泄露，请尽快重新登录并修改密码。 
+[2023-03-21 23:22:16] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:22:18] [WARNING]: 将在 3 秒后尝试重连. 重连次数：2/0 
+[2023-03-21 23:22:21] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:22:21] [WARNING]: 尝试重连... 
+[2023-03-21 23:22:22] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:22:22] [WARNING]: 快速重连失败: token failed 
+[2023-03-21 23:22:22] [WARNING]: 快速重连失败, 尝试普通登录. 这可能是因为其他端强行T下线导致的. 
+[2023-03-21 23:22:25] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:22:26] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:22:31] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:22:32] [FATAL]: open cache image db failed: The process cannot access the file because it is being used by another process. 
+[2023-03-21 23:22:33] [WARNING]: Bot已离线: 你的QQ号于23:23在【PCS02】设备登录，当前设备已下线。如果这不是你本人操作，那么你的QQ密码可能已经泄露，请尽快重新登录并修改密码。 
+[2023-03-21 23:22:36] [WARNING]: 将在 3 秒后尝试重连. 重连次数：2/0 
+[2023-03-21 23:22:44] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:22:44] [WARNING]: 恢复会话失败: token failed , 尝试使用正常流程登录. 
+[2023-03-21 23:22:49] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:22:52] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:22:57] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:22:58] [WARNING]: Bot已离线: 你的QQ号于23:23在【PCS02】设备登录，当前设备已下线。如果这不是你本人操作，那么你的QQ密码可能已经泄露，请尽快重新登录并修改密码。 
+[2023-03-21 23:23:01] [WARNING]: 将在 3 秒后尝试重连. 重连次数：2/0 
+[2023-03-21 23:23:02] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:23:04] [WARNING]: 尝试重连... 
+[2023-03-21 23:23:04] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:23:04] [WARNING]: 快速重连失败: token failed 
+[2023-03-21 23:23:04] [WARNING]: 快速重连失败, 尝试普通登录. 这可能是因为其他端强行T下线导致的. 
+[2023-03-21 23:23:07] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:42830/onebot/v11/ws 时出现错误: dial tcp 0.0.0.0:42830: connectex: No connection could be made because the target machine actively refused it. 
+[2023-03-21 23:23:08] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:44:40] [WARNING]: 当前协议不支持二维码登录, 请配置账号密码登录. 
+[2023-03-21 23:45:16] [WARNING]: Protocol -> device lock is disable. http api may fail. 
+[2023-03-21 23:45:18] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:52000/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:45:21] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:52000/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:45:24] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:52000/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:45:27] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:52000/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:45:30] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:52000/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:45:33] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:52000/onebot/v11/ws 时出现错误: websocket: bad handshake 
+[2023-03-21 23:45:36] [WARNING]: 连接到反向WebSocket Universal服务器 ws://0.0.0.0:52000/onebot/v11/ws 时出现错误: websocket: bad handshake 
