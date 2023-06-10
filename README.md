@@ -1,11 +1,5 @@
-# TheFirstBots
+要先用pip安装nonebot框架
 
-## How to start
-
-1. generate project using `nb create` .
-2. install plugins using `nb plugin install` .
-3. run your bot using `nb run` .
-
-## Documentation
-
-See [Docs](https://v2.nonebot.dev/)
+## 功能
+* 七牛云存储空间相关功能
+* 简单的自动回复
