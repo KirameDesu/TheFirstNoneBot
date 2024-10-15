@@ -38,7 +38,6 @@ mr_sendpicture_setu = on_regex(r"^来.+图$", priority=5)
 mr_sendpicture_picOnCloud = on_regex(r"云图|涩图|瑟图|涩涩", priority=7)
 mr_pushpicture = on_regex(r"上传", priority=7)
 mr_sendmeme_antiop = on_regex(r"(差不多得了|你说的对)?(原神|原批|op|OP)", priority=9)
-mr_sendmeme_toxingxing = on_message(priority=10, block=False)
 mr_sendreply_normal = on_keyword( {"什么", "是谁"}, rule=to_me, priority=10, block=False)
 
 # mm_sendreply_ok = on_message(priority=8, block=False)
