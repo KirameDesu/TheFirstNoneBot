@@ -18,7 +18,7 @@ reply_ok_list = [
 ]
 
 
-data_dir = "./plugins/mytest/time_data/"
+data_dir = "./linuxbot/plugins/mytest/time_data/"
 
 
 def write():  # 写入CD时间
