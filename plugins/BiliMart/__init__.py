@@ -14,7 +14,15 @@ from nonebot import on_command, logger
 
 from plugins.BiliMart.bilimart import get_match_items_str, append_keyword, set_min_price, set_max_price, set_bot_matcher
 
+
+pattern = r'^--minprice\s+\d+(\.\d+)?\s+--maxprice\s+\d+(\.\d+)?\s+--keyword\s+.+$'
+
+
+'''
+响应信息定义
+'''
 mc_biliMart = on_command("bilimart")
+
 
 @mc_biliMart.handle()
 async def _(marcher: Matcher, args: Message = CommandArg()):
@@ -26,7 +34,7 @@ async def _(marcher: Matcher, args: Message = CommandArg()):
         else:
             try:
                 args = parse_command_line(para)
-                matched_str = await do_bilimart(args.minprice, args.maxprice, args.keyword)
+                matched_str = do_bilimart(args.minprice, args.maxprice, args.keyword)
                 if matched_str != "":
                     await mc_biliMart.finish(matched_str)
                 else:
@@ -63,13 +71,13 @@ async def _(matcher: Matcher, max_money: str = ArgPlainText()):
 
 
 
-async def do_bilimart(min_price: float, max_price: float, keyword: str)-> str:
+def do_bilimart(min_price: float, max_price: float, keyword: str)-> str:
     set_min_price(min_price)
     set_max_price(max_price)
     append_keyword(keyword)
     logger.info(f"开始查询最小金额{min_price},最大金额{max_price},关键词\"{keyword}\"的商品...")
     try:
-        item_str = await get_match_items_str()
+        item_str = get_match_items_str()
         return item_str
     except ValueError as e:
         logger.error(f"爬取函数执行出错--{e}")
@@ -81,7 +89,6 @@ async def do_bilimart(min_price: float, max_price: float, keyword: str)-> str:
 #         await mc_biliMart.reject("戳我一下")
 #     await mc_biliMart.finish("Roger~")
 
-pattern = r'^--minprice\s+\d+(\.\d+)?\s+--maxprice\s+\d+(\.\d+)?\s+--keyword\s+.+$'
 def parse_command_line(input_str):
     # 检查输入字符串是否包含所需的参数
     if not re.match(pattern, input_str.strip()):

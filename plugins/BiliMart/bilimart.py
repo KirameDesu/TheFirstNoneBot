@@ -1,13 +1,19 @@
 # ------------------------- Configuration Modification -------------------------
-# 请填写 Bilibili Cookie 至下方引号内
+
+import asyncio
 import re
 import random
-from asyncio import sleep
+import sqlite3
 from typing import Optional
 
-from nonebot import logger
 from nonebot.matcher import Matcher
+from plugins.BiliMart import database
 
+db = database
+
+db_lock = asyncio.Lock()
+
+# 请填写 Bilibili Cookie 至下方引号内
 BILIBILI_COOKIE = "buvid4=5B6A3A11-7A2B-D09D-3DD2-1D8C3DD3F36630667-022120611-hVn2U35PvWhS3UuTmAFR1g%3D%3D; header_theme_version=CLOSE; CURRENT_FNVAL=4048; is-2022-channel=1; buvid_fp_plain=undefined; enable_web_push=DISABLE; hit-dyn-v2=1; PVID=1; CURRENT_QUALITY=64; FEED_LIVE_VERSION=V_WATCHLATER_PIP_WINDOW3; buvid3=C3D2E1D5-0BF2-9DF7-F330-96214E9CC11F60521infoc; b_nut=1725433360; _uuid=E28E1CD4-D6E4-9AB3-9F99-8889B1D65EF760750infoc; fingerprint=7c60a2c8264c8cb61673c5b6fe173a59; buvid_fp=7c60a2c8264c8cb61673c5b6fe173a59; bili_ticket=eyJhbGciOiJIUzI1NiIsImtpZCI6InMwMyIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjkyMjYyMDMsImlhdCI6MTcyODk2Njk0MywicGx0IjotMX0.FMlb17C6NkexEfM5FbkWdk0ApgT7iqdxw1EZIWIzERo; bili_ticket_expires=1729226143; SESSDATA=3ef6035b%2C1744519138%2C36012%2Aa2CjAJCHreOILUWylqvjh6Mc8xo__ZQve5Pd0NUgYZ3rj0hLX6kGFUxA6Ds_fz8aXby7YSVnU5SWJxT0h1cFc1QW5uUkx2NHVBdzI3WGFreFdkMzI3R3ZHQ2RfUGxyTEJBdVBtc2lleGlCc1ptUV95UjAtekdoMDRQWjNxdU1kenFIVGozXzA0U0hBIIEC; bili_jct=40ffb5a3a8ba590d957e91d03a73f6c2; DedeUserID=3546779823900918; DedeUserID__ckMd5=3a5547f69f307f08; sid=8fp3bwaf; bsource=search_bing; bmg_af_switch=1; bmg_src_def_domain=i1.hdslb.com; rpdid=0zbfVGpAUa|hSgk3Z8E|1IA|3w1T0ZeJ; deviceFingerprint=4e6d0e71273b181658ce76b5d483db72; kfcFrom=mall_search_mall; from=mall_search_mall; b_lsid=E4E6CD82_19294DCAAB7; bp_t_offset_3546779823900918=988855849843687424; home_feed_column=4; browser_resolution=1060-2329"
 # ------------------------------------------------------------------------------
 
@@ -27,7 +33,6 @@ g_max_price = 5000
 min_discount = 0
 max_discount = 90
 category_entry_value = "手办"
-
 
 
 class Item:
@@ -75,8 +80,9 @@ class BiliMart:
 bilimart = BiliMart()
 matcher: Optional[Matcher] = None
 
-async def crawler():
-    global category_eatry, output_dir, g_min_price, g_max_price, showPrice, start_time, item_count, pause_count, retry_count
+def crawler():
+    global category_eatry, output_dir, showPrice, start_time, item_count, pause_count, retry_count
+    global g_min_price, g_max_price
 
     mall_url = "https://mall.bilibili.com/mall-magic-c/internet/c2c/v2/list"
 
@@ -167,14 +173,20 @@ async def crawler():
                 # 检查商品名称中是否包含关键字
                 if is_match_keywords(c2cItemsName):
                     bilimart.add_match_item(Item(c2cItemsName, showPrice, c2cItemsId))
+
+                try:
+                    db.insert_item_data(item)
+                except sqlite3.IntegrityError as e:
+                    print("重复ID" + e)
+
                 item_count += 1
                 retry_count = 0
 
-            if item_count % 300 == 0:
-                await matcher.send(f"刷新到了{item_count}个商品，正在查找符合关键字的商品中...")
+            # if item_count % 300 == 0:
+            #     await matcher.send(f"刷新到了{item_count}个商品，正在查找符合关键字的商品中...")
 
             bilimart.curr_search_time += 1
-            time.sleep(random.randint(2,10))
+            time.sleep(random.randint(1,6))
             if nextId is None:
                 break
         except (TypeError, KeyError) as e:
@@ -216,7 +228,7 @@ async def crawler():
                     elif response["code"] == 83001002:
                         print(f'{Fore.MAGENTA}{"-" * 70}{Style.RESET_ALL}')
                         print(f'{Fore.RED}[Error {response["code"]}] 检测到 Bilibili Cookie 配置不正确! 请检查后重试...{Style.RESET_ALL}')
-                        await matcher.send("cookie配置有问题了哦")
+                        # await matcher.send("cookie配置有问题了哦")
                         print(f'{Fore.MAGENTA}{"-" * 70}{Style.RESET_ALL}')
                         exit()
                     else:
@@ -246,7 +258,7 @@ async def crawler():
             try:
                 print(f'{Fore.MAGENTA}{"-" * 70}{Style.RESET_ALL}')
                 print(f'{Fore.RED}[Error 412] 检测到账号已被风控! 请更换 IP 后重试...{Style.RESET_ALL}')
-                await matcher.send("哦豁!检测到账号已被风控")
+                # await matcher.send("哦豁!检测到账号已被风控")
                 print(f'{Fore.YELLOW}[WARN] 从现在起, 爬取器每暂停 60 秒都将重试, 连续失败 5 次后认定爬取失败, 程序自动退出{Style.RESET_ALL}') if retry_count == 0 else ""
                 information_values_output(1)
                 print(f'{Fore.MAGENTA}{"-" * 70}{Style.RESET_ALL}')
@@ -436,7 +448,7 @@ def append_keyword(keyword: str):
 
 
 #返回获取到的商品信息字符串
-async def get_match_items_str()-> str:
+def get_match_items_str()-> str:
     global g_min_price, g_max_price, min_discount, max_discount, min_discount
     colorama.init(autoreset=True)
     if bilimart.min_price is not None:
@@ -452,8 +464,11 @@ async def get_match_items_str()-> str:
         bilimart.reset()
         raise ValueError("matcher 不能为空")
 
+    # 数据库初始化
+    db.init()
+
     # 爬取主函数
-    await crawler()
+    crawler()
 
     bilimart.reset()
     colorama.deinit()
