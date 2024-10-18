@@ -11,12 +11,12 @@ from nonebot.params import CommandArg, Received, LastReceived
 from nonebot.matcher import Matcher
 
 from nonebot import on_command, logger
+from starlette.config import undefined
 
 from plugins.BiliMart.bilimart import get_match_items_str, append_keyword, set_min_price, set_max_price, set_bot_matcher
 
-
-pattern = r'^--minprice\s+\d+(\.\d+)?\s+--maxprice\s+\d+(\.\d+)?\s+--keyword\s+.+$'
-
+pattern1 = r'--minprice\s+\d+(\.\d+)?\s*--maxprice\s+\d+(\.\d+)?\s*(--keyword\s+.+\s*)?$'
+pattern2 = r'123123'
 
 '''
 响应信息定义
@@ -29,11 +29,16 @@ async def _(marcher: Matcher, args: Message = CommandArg()):
     set_bot_matcher(marcher)
     if para := args.extract_plain_text():
         if para == "go":
-        # await mc_biliMart.finish(f"关键字{para}");
+            # await mc_biliMart.finish(f"关键字{para}");
             await mc_biliMart.finish(get_match_items_str())
         else:
             try:
                 args = parse_command_line(para)
+                if args.keyword:
+                    await mc_biliMart.send("开始搜索~关键字为\"" + str(args.keyword) + "\"")
+                else:
+                    await mc_biliMart.send(f"准备更新数据库~金额范围为{args.minprice}到{args.maxprice}")
+                # BiliMart搜索主程序
                 matched_str = do_bilimart(args.minprice, args.maxprice, args.keyword)
                 if matched_str != "":
                     await mc_biliMart.finish(matched_str)
@@ -41,7 +46,8 @@ async def _(marcher: Matcher, args: Message = CommandArg()):
                     await mc_biliMart.finish("什么都没有找到哦")
             except ValueError:
                 await mc_biliMart.finish("这是不被识别的指令格式哦")
-
+            except AttributeError:
+                await mc_biliMart.finish("参数错了哦")
 
 
 @mc_biliMart.got("keyword", prompt="给我一个关键字")
@@ -70,8 +76,7 @@ async def _(matcher: Matcher, max_money: str = ArgPlainText()):
         await mc_biliMart.finish(await do_bilimart(minp, maxp, kw))
 
 
-
-def do_bilimart(min_price: float, max_price: float, keyword: str)-> str:
+def do_bilimart(min_price: float, max_price: float, keyword: str) -> str:
     set_min_price(min_price)
     set_max_price(max_price)
     append_keyword(keyword)
@@ -83,25 +88,36 @@ def do_bilimart(min_price: float, max_price: float, keyword: str)-> str:
         logger.error(f"爬取函数执行出错--{e}")
         return ""
 
+
 # @mc_biliMart.receive()
 # async def receive_func(event: Event = LastReceived()):
 #     if event.get_type() == "message":
 #         await mc_biliMart.reject("戳我一下")
 #     await mc_biliMart.finish("Roger~")
 
-def parse_command_line(input_str):
-    # 检查输入字符串是否包含所需的参数
-    if not re.match(pattern, input_str.strip()):
-        raise ValueError("Input string must contain --minprice, --maxprice, and --keyword.")
 
+def normal_search(input_str):
     # 将输入字符串转换为适合 argparse 的格式
     args_list = shlex.split(input_str)
 
     parser = argparse.ArgumentParser(description='Parse command line arguments for min price, max price, and keyword.')
     parser.add_argument('--minprice', type=float, help='Minimum price', required=True)
     parser.add_argument('--maxprice', type=float, help='Maximum price', required=True)
-    parser.add_argument('--keyword', type=str, help='Keyword', required=True)
+    parser.add_argument('--keyword', type=str, help='Keyword', required=False)
 
     # 解析参数
     args = parser.parse_args(args_list)
+    return args
+
+
+
+def parse_command_line(input_str):
+    # 检查输入字符串是否包含所需的参数
+    if re.match(pattern1, input_str.strip()):
+        args = normal_search(input_str)
+    # if re.match(pattern2, input_str.strip()):
+    #     arg = undefined_search(input_str)
+    else:
+        raise ValueError("Wrong Command Input.")
+
     return args

@@ -27,7 +27,6 @@ def _create_tables():
 
     # 如果两个表都存在，直接退出函数
     if items_exists and details_exists:
-        print("items 和 details 表格均已存在，直接退出函数。")
         conn.close()
         return  # 表格已存在，退出函数
 
@@ -47,6 +46,7 @@ def _create_tables():
         uname TEXT,
         uspaceJumpUrl TEXT,
         uface TEXT
+        create_time TEXT
     );
     ''')
 
@@ -75,9 +75,10 @@ def _insert_one_data_to_items(item_data):
     cursor = conn.cursor()
 
     try:
+        # 插入商品的Item信息
         cursor.execute('''
-        INSERT INTO items (c2cItemsId, type, c2cItemsName, totalItemsCount, price, showPrice, showMarketPrice, uid, paymentTime, isMyPublish, uname, uspaceJumpUrl, uface) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        INSERT OR REPLACE INTO items (c2cItemsId, type, c2cItemsName, totalItemsCount, price, showPrice, showMarketPrice, uid, paymentTime, isMyPublish, uname, uspaceJumpUrl, uface, create_time) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, strftime('%Y-%m-%d %H:%M:%S', 'now'))
         ''', (
             item_data['c2cItemsId'],
             item_data['type'],
@@ -94,7 +95,7 @@ def _insert_one_data_to_items(item_data):
             item_data['uface']
         ))
     except sqlite3.IntegrityError as e:
-        print(e)
+        print("_insert_one_data_to_items:" + str(e))
     item_id = cursor.lastrowid  # 获取插入的商品 ID
     conn.commit()
     conn.close()
@@ -106,21 +107,24 @@ def _insert_one_data_to_details(item_id, data):
     conn = connect_db()
     cursor = conn.cursor()
 
-    cursor.execute('''
-    INSERT INTO details (blindBoxId, itemsId, skuId, name, img, marketPrice, type, isHidden, item_id) 
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-    
-    ''', (
-        data['blindBoxId'],
-        data['itemsId'],
-        data['skuId'],
-        data['name'],
-        data['img'],
-        data['marketPrice'],
-        data['type'],
-        data['isHidden'],
-        item_id
-    ))
+    try:
+        # 插入商品details信息
+        cursor.execute('''
+        INSERT INTO details (blindBoxId, itemsId, skuId, name, img, marketPrice, type, isHidden, item_id) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ''', (
+            data['blindBoxId'],
+            data['itemsId'],
+            data['skuId'],
+            data['name'],
+            data['img'],
+            data['marketPrice'],
+            data['type'],
+            data['isHidden'],
+            item_id
+        ))
+    except sqlite3.IntegrityError as e:
+        print("_insert_one_data_to_details:" + str(e))
 
     conn.commit()
     conn.close()

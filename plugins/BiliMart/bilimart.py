@@ -6,6 +6,7 @@ import random
 import sqlite3
 from typing import Optional
 
+from nonebot import logger
 from nonebot.matcher import Matcher
 from plugins.BiliMart import database
 
@@ -28,6 +29,8 @@ import pandas as pd
 
 MAX_SEARCH_TIME = 2000
 
+g_cost_min, g_cost_sec = (0, 0)
+g_item_cnt = 0
 g_min_price = 0
 g_max_price = 5000
 min_discount = 0
@@ -81,7 +84,7 @@ bilimart = BiliMart()
 matcher: Optional[Matcher] = None
 
 def crawler():
-    global category_eatry, output_dir, showPrice, start_time, item_count, pause_count, retry_count
+    global category_eatry, output_dir, showPrice, start_time, g_item_cnt, pause_count, retry_count
     global g_min_price, g_max_price
 
     mall_url = "https://mall.bilibili.com/mall-magic-c/internet/c2c/v2/list"
@@ -109,7 +112,7 @@ def crawler():
     category_entry_real = category_entry_value.replace("c", "C")
     ID = id_mapping.get(category_entry_real, "")
     item_list = []
-    item_count = pause_count = retry_count = 0
+    g_item_cnt = pause_count = retry_count = 0
     showPrice = g_min_price
     nextId = None
     start_time = time.perf_counter()
@@ -171,15 +174,15 @@ def crawler():
                     "卖家UID": uid
                 })
                 # 检查商品名称中是否包含关键字
-                if is_match_keywords(c2cItemsName):
+                if bilimart.keywords == [] and is_match_keywords(c2cItemsName):
                     bilimart.add_match_item(Item(c2cItemsName, showPrice, c2cItemsId))
 
                 try:
                     db.insert_item_data(item)
                 except sqlite3.IntegrityError as e:
-                    print("重复ID" + e)
+                    logger.log("重复ID" + str(e))
 
-                item_count += 1
+                g_item_cnt += 1
                 retry_count = 0
 
             # if item_count % 300 == 0:
@@ -377,20 +380,20 @@ def information_values_output(tag):
         progress = (float(showPrice) - float(g_min_price)) / (float(g_max_price) - float(g_min_price))
 
     interval_time = time.perf_counter() - start_time
-    min, sec = extract_minutes_seconds(interval_time)
+    g_cost_min, g_cost_sec = extract_minutes_seconds(interval_time)
     # remain_min, remain_sec = extract_minutes_seconds(interval_time / progress - interval_time)
 
-    if tag == 0 and item_count != 0:  # Default 输出
-        print(f'{Fore.CYAN}[INFO] 当前为第 {pause_count} 次暂停, 已爬取 {item_count} 件商品, 爬取进度 {progress * 100:.2f} %{Style.RESET_ALL}')
+    if tag == 0 and g_item_cnt != 0:  # Default 输出
+        print(f'{Fore.CYAN}[INFO] 当前为第 {pause_count} 次暂停, 已爬取 {g_item_cnt} 件商品, 爬取进度 {progress * 100:.2f} %{Style.RESET_ALL}')
         # print(f'{Fore.GREEN}[INFO] 程序已运行 {min} 分 {sec} 秒, 预计还将运行 {remain_min} 分 {remain_sec} 秒{Style.RESET_ALL}')
-    elif tag == 1 and item_count != 0:  # Error 412 输出
-        print(f'{Fore.CYAN}[INFO] 当前为第 {pause_count} 次暂停, 已爬取 {item_count} 件商品, 爬取进度 {progress * 100:.2f} %{Style.RESET_ALL}') if retry_count == 0 else print(f'{Fore.CYAN}[INFO] 当前为第 {retry_count} 次重试, 第 {pause_count} 次暂停, 已爬取 {item_count} 件商品, 爬取进度 {progress * 100:.2f} %{Style.RESET_ALL}')
+    elif tag == 1 and g_item_cnt != 0:  # Error 412 输出
+        print(f'{Fore.CYAN}[INFO] 当前为第 {pause_count} 次暂停, 已爬取 {g_item_cnt} 件商品, 爬取进度 {progress * 100:.2f} %{Style.RESET_ALL}') if retry_count == 0 else print(f'{Fore.CYAN}[INFO] 当前为第 {retry_count} 次重试, 第 {pause_count} 次暂停, 已爬取 {g_item_cnt} 件商品, 爬取进度 {progress * 100:.2f} %{Style.RESET_ALL}')
         # print(f'{Fore.GREEN}[INFO] 程序已运行 {min} 分 {sec} 秒, 预计还将运行 {remain_min} 分 {remain_sec} 秒{Style.RESET_ALL}')
-    elif tag == 2 and item_count != 0:  # KeyboardInterrupt 输出
-        print(f'{Fore.CYAN}[INFO] 当前已爬取 {item_count} 件商品, 爬取进度 {progress * 100:.2f} %{Style.RESET_ALL}')
+    elif tag == 2 and g_item_cnt != 0:  # KeyboardInterrupt 输出
+        print(f'{Fore.CYAN}[INFO] 当前已爬取 {g_item_cnt} 件商品, 爬取进度 {progress * 100:.2f} %{Style.RESET_ALL}')
     elif tag == 3:  # DONE 输出
-        print(f'{Fore.GREEN}[DONE] 爬取进程结束, 本次在 {g_min_price}-{g_max_price} 元的区间内共爬取到 {item_count} 件商品, 耗时 {min} 分 {sec} 秒!{Style.RESET_ALL}')
-        exit() if item_count == 0 else ""
+        print(f'{Fore.GREEN}[DONE] 爬取进程结束, 本次在 {g_min_price}-{g_max_price} 元的区间内共爬取到 {g_item_cnt} 件商品, 耗时 {g_cost_min} 分 {g_cost_sec} 秒!{Style.RESET_ALL}')
+        exit() if g_item_cnt == 0 else ""
 
 def time_sleep_5s():
     for i in range(5, 0, -1):
@@ -447,6 +450,21 @@ def append_keyword(keyword: str):
         bilimart.keywords.append(keyword)
 
 
+def _print_end_tips() -> str:
+    tips: str = ""
+    if not bilimart.keywords:
+        tips.format(f"在{bilimart.min_price}到{bilimart.max_price}价格区间共刷新到{g_item_cnt}个商品, 耗时 {g_cost_min} 分 {g_cost_sec} 秒!{Style.RESET_ALL}")
+    elif not bilimart.match_items:
+        tips.format(f"没有找到关键词为\""+ str("/".join(bilimart.keywords)) + "\"的商品哦")
+    else:
+        tips = bilimart.print()
+
+    if tips == "":
+        tips.format("似乎发生了未预见的错误...")
+
+    return tips
+
+
 #返回获取到的商品信息字符串
 def get_match_items_str()-> str:
     global g_min_price, g_max_price, min_discount, max_discount, min_discount
@@ -466,10 +484,10 @@ def get_match_items_str()-> str:
 
     # 数据库初始化
     db.init()
-
     # 爬取主函数
     crawler()
-
+    # 程序重置
     bilimart.reset()
     colorama.deinit()
-    return bilimart.print()
+
+    return _print_end_tips()
