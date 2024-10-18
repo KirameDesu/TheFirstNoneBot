@@ -18,6 +18,10 @@ db_lock = asyncio.Lock()
 BILIBILI_COOKIE = "buvid4=5B6A3A11-7A2B-D09D-3DD2-1D8C3DD3F36630667-022120611-hVn2U35PvWhS3UuTmAFR1g%3D%3D; header_theme_version=CLOSE; CURRENT_FNVAL=4048; is-2022-channel=1; buvid_fp_plain=undefined; enable_web_push=DISABLE; hit-dyn-v2=1; PVID=1; CURRENT_QUALITY=64; FEED_LIVE_VERSION=V_WATCHLATER_PIP_WINDOW3; buvid3=C3D2E1D5-0BF2-9DF7-F330-96214E9CC11F60521infoc; b_nut=1725433360; _uuid=E28E1CD4-D6E4-9AB3-9F99-8889B1D65EF760750infoc; fingerprint=7c60a2c8264c8cb61673c5b6fe173a59; buvid_fp=7c60a2c8264c8cb61673c5b6fe173a59; bili_ticket=eyJhbGciOiJIUzI1NiIsImtpZCI6InMwMyIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjkyMjYyMDMsImlhdCI6MTcyODk2Njk0MywicGx0IjotMX0.FMlb17C6NkexEfM5FbkWdk0ApgT7iqdxw1EZIWIzERo; bili_ticket_expires=1729226143; SESSDATA=3ef6035b%2C1744519138%2C36012%2Aa2CjAJCHreOILUWylqvjh6Mc8xo__ZQve5Pd0NUgYZ3rj0hLX6kGFUxA6Ds_fz8aXby7YSVnU5SWJxT0h1cFc1QW5uUkx2NHVBdzI3WGFreFdkMzI3R3ZHQ2RfUGxyTEJBdVBtc2lleGlCc1ptUV95UjAtekdoMDRQWjNxdU1kenFIVGozXzA0U0hBIIEC; bili_jct=40ffb5a3a8ba590d957e91d03a73f6c2; DedeUserID=3546779823900918; DedeUserID__ckMd5=3a5547f69f307f08; sid=8fp3bwaf; bsource=search_bing; bmg_af_switch=1; bmg_src_def_domain=i1.hdslb.com; rpdid=0zbfVGpAUa|hSgk3Z8E|1IA|3w1T0ZeJ; deviceFingerprint=4e6d0e71273b181658ce76b5d483db72; kfcFrom=mall_search_mall; from=mall_search_mall; b_lsid=E4E6CD82_19294DCAAB7; bp_t_offset_3546779823900918=988855849843687424; home_feed_column=4; browser_resolution=1060-2329"
 # ------------------------------------------------------------------------------
 
+# 魔力赏商品详情网站模板
+ITEM_URL = "https://mall.bilibili.com/neul-next/index.html?page=magic-market_detail&noTitleBar=1&itemsId={}&from=market_index"
+
+
 import colorama
 from colorama import Fore, Style
 import time
@@ -70,7 +74,8 @@ class BiliMart:
     def print(self) -> str:
         item_strings = []
         for item in self.match_items:
-            item_strings.append(str(item))
+            item_name, item_id, price, update_time = item
+            item_strings.append("{}, 金额{}, url: ".format(item_name, price) + ITEM_URL.format(item_id) + ", 更新时间: {}".format(update_time))
         self.match_items.clear()
 
         return "\n".join(item_strings)
@@ -79,6 +84,7 @@ class BiliMart:
         self.curr_search_time = 0
         self.curr_match_time = 0
         self.keywords.clear()
+
 
 bilimart = BiliMart()
 matcher: Optional[Matcher] = None
@@ -176,7 +182,7 @@ def crawler():
                 # 检查商品名称中是否包含关键字
                 if bilimart.keywords == [] and is_match_keywords(c2cItemsName):
                     bilimart.add_match_item(Item(c2cItemsName, showPrice, c2cItemsId))
-
+                # 插入数据库
                 try:
                     db.insert_item_data(item)
                 except sqlite3.IntegrityError as e:
@@ -451,22 +457,17 @@ def append_keyword(keyword: str):
 
 
 def _print_end_tips() -> str:
-    tips: str = ""
     if not bilimart.keywords:
-        tips.format(f"在{bilimart.min_price}到{bilimart.max_price}价格区间共刷新到{g_item_cnt}个商品, 耗时 {g_cost_min} 分 {g_cost_sec} 秒!{Style.RESET_ALL}")
-    elif not bilimart.match_items:
-        tips.format(f"没有找到关键词为\""+ str("/".join(bilimart.keywords)) + "\"的商品哦")
-    else:
-        tips = bilimart.print()
+        return f"在{bilimart.min_price}到{bilimart.max_price}价格区间共刷新到{g_item_cnt}个商品, 耗时 {g_cost_min} 分 {g_cost_sec} 秒!{Style.RESET_ALL}"
 
-    if tips == "":
-        tips.format("似乎发生了未预见的错误...")
+    if not bilimart.match_items:
+        return "没有找到关键词为\"" + str("/".join(bilimart.keywords)) + "\"的商品哦"
 
-    return tips
+    return bilimart.print() or "似乎发生了未预见的错误..."
 
 
-#返回获取到的商品信息字符串
-def get_match_items_str()-> str:
+#返回更新数据库的商品信息字符串
+def update_database()-> str:
     global g_min_price, g_max_price, min_discount, max_discount, min_discount
     colorama.init(autoreset=True)
     if bilimart.min_price is not None:
@@ -491,3 +492,45 @@ def get_match_items_str()-> str:
     colorama.deinit()
 
     return _print_end_tips()
+
+
+def update(min_price: float, max_price: float, keyword: str) -> str:
+    set_min_price(min_price)
+    set_max_price(max_price)
+    append_keyword(keyword)
+    logger.info(f"开始查询最小金额{min_price},最大金额{max_price},关键词\"{keyword}\"的商品...")
+    try:
+        ret_str = update_database()
+        return ret_str
+    except ValueError as e:
+        logger.error(f"更新数据库函数执行出错--{e}")
+        raise e
+
+
+#返回搜索数据库得到的字符串
+def require_data_from_db(min_price: float = None, max_price: float = None, keyword: str = "")-> str:
+    # 从数据库查找
+    bilimart.match_items = db.search_items_by_keyword(min_price, max_price, keyword)
+    # 获取结果字符串
+    print_end_tips = _print_end_tips()
+    # 重置
+    bilimart.reset()
+
+    return print_end_tips
+
+
+def get(min_price: float = None, max_price: float = None, keyword: str = "") -> str:
+    if keyword == "":
+        return "需要填写关键字哦"
+    append_keyword(keyword)
+
+    if min_price is None:
+        min_price = db.get_min_show_price()
+    if max_price is None:
+        max_price = db.get_max_show_price()
+    # 根据关键字查询元素
+    try:
+        ret_str = require_data_from_db(min_price, max_price, keyword)
+        return ret_str
+    except ValueError as e:
+        logger.error(f"查询数据库函数执行出错--{e}")

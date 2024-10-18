@@ -69,6 +69,41 @@ def _create_tables():
     conn.commit()
     conn.close()
 
+
+def get_min_show_price():
+    # 连接到数据库
+    conn = connect_db()
+    cursor = conn.cursor()
+
+    # 查询 showPrice 的最小值
+    cursor.execute("SELECT MIN(showPrice) FROM items")
+    min_show_price = cursor.fetchone()[0]  # 获取第一个结果
+
+    # 关闭连接
+    cursor.close()
+    conn.close()
+
+    return min_show_price
+
+def get_max_show_price():
+    # 连接到数据库
+    conn = connect_db()
+    cursor = conn.cursor()
+
+    # 查询 showPrice 的最小值
+    cursor.execute("SELECT MAX(showPrice) FROM items")
+    max_show_price = cursor.fetchone()[0]  # 获取第一个结果
+
+    # 关闭连接
+    cursor.close()
+    conn.close()
+
+    return max_show_price
+
+
+#=================================================================================
+#                             数据库查询部分
+#=================================================================================
 def _insert_one_data_to_items(item_data):
     """插入商品数据"""
     conn = connect_db()
@@ -136,6 +171,43 @@ def insert_item_data(data):
 
     i = _insert_one_data_to_items(data)  # 插入商品并获取 ID
     _insert_one_data_to_details(i, details_data)  # 插入详细信息
+
+
+#=================================================================================
+#                             数据库查询部分
+#=================================================================================
+def search_items_by_keyword(min_price: float = None, max_price: float = None, keyword: str = "") -> []:
+    # 连接到数据库
+    conn = connect_db()
+    cursor = conn.cursor()
+
+    # 先按关键词搜索
+    sql = '''
+                SELECT c2cItemsName, c2cItemsId, showPrice, create_time
+                FROM items
+                WHERE c2cItemsName LIKE ?
+            '''
+    params = [f'%{keyword}%']
+
+    # 动态添加价格筛选条件
+    if min_price is not None:
+        sql += ' AND showPrice >= ?'
+        params.append(min_price)
+    if max_price is not None:
+        sql += ' AND showPrice <= ?'
+        params.append(max_price)
+
+    # 按 showPrice 升序排列
+    sql += ' ORDER BY showPrice ASC'
+
+    # 执行查询
+    cursor.execute(sql, params)
+
+    # 获取结果并关闭连接
+    results = cursor.fetchall()
+    conn.close()
+
+    return results
 
 
 def init():
